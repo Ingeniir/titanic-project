@@ -1,0 +1,27 @@
+# Environnement virtuel
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Modèles générés
+models/*.joblib
+models/*.pkl
+
+# Données et soumissions
+data/raw/
+data/processed/
+submissions/*.csv
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
