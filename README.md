@@ -202,8 +202,8 @@ Certains fichiers générés (modèle, données) peuvent être exclus du dépôt
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/UTILISATEUR/NOM-DU-DEPOT.git
-cd NOM-DU-DEPOT
+git clone https://github.com/Ingeniir/titanic-project.git
+cd titanic-project
 ```
 
 ### 2. Créer un environnement virtuel
