@@ -52,7 +52,7 @@ CATEGORICAL_FEATURES = [
 ]
 
 
-def build_features(dataframe):
+def build_features(dataframe: pd.DataFrame) -> pd.DataFrame:
     """
     Crée des variables supplémentaires à partir des données brutes
     du Titanic.
@@ -123,7 +123,7 @@ def build_features(dataframe):
     return features
 
 
-def select_model_features(dataframe):
+def select_model_features(dataframe: pd.DataFrame) -> pd.DataFrame:
     """
     Sélectionne les variables destinées aux modèles.
     """
@@ -135,3 +135,23 @@ def select_model_features(dataframe):
         )
 
     return dataframe[MODEL_FEATURES].copy()
+
+
+def build_model_features(dataframe: pd.DataFrame) -> pd.DataFrame:
+    """
+    Applique la feature engineering puis sélectionne les variables
+    destinés à la modélisation.
+
+    Parameters
+    ----------
+    dataframe : pandas.DataFrame
+        Données brutes du Titanic sans la cible Survived.
+
+    Returns
+    -------
+    pandas.DataFrame
+        Variables finales destinées au préprocesseur.
+    """
+    engineered_data = build_features(dataframe)
+
+    return select_model_features(engineered_data)
